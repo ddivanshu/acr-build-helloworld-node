@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: "divman-a90a"
+    labels:
+        app: "divman-a90a"
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 8080
+      targetPort: 8080
+      protocol: TCP
+      name: http
+    selector:
+        app: "divman-a90a"
