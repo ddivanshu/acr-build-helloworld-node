@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "divman-2bea"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "divman-2bea"
+  template:
+    metadata:
+      labels:
+        app: "divman-2bea"
+    spec:
+      containers:
+        - name: "divman-2bea"
+          image: "divman.azurecr.io/divman2bea"
+          ports:
+          - containerPort: 8080
