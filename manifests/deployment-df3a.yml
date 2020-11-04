@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "divman-df3a"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "divman-df3a"
+  template:
+    metadata:
+      labels:
+        app: "divman-df3a"
+    spec:
+      containers:
+        - name: "divman-df3a"
+          image: "divman.azurecr.io/divmandf3a"
+          ports:
+          - containerPort: 8080
