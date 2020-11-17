@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "diaggarw-7910"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "diaggarw-7910"
+  template:
+    metadata:
+      labels:
+        app: "diaggarw-7910"
+    spec:
+      containers:
+        - name: "diaggarw-7910"
+          image: "diaggarwtest.azurecr.io/diaggarw"
+          ports:
+          - containerPort: 8080
