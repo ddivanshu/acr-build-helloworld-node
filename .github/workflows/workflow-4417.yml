@@ -19,7 +19,7 @@ jobs:
     # login using azure credentials
     - uses: azure/login@v1
       with:
-        creds: ${{secrets.AZURE_CREDENTIALS_GITHUB_SECRET_4417}}
+        creds: ${{secrets.AZURE_CREDENTIALS_GITHUB_SECRET_4417000}}
 
     - uses: actions/setup-node@v1
       with:
