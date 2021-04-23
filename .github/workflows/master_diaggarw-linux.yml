@@ -52,5 +52,5 @@ jobs:
       with:
         app-name: 'diaggarw-linux'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_e60fe20408ce444eb9f17c1594a80729 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_a0873ff01c764283be24d788cf29cbb8 }}
         package: .
