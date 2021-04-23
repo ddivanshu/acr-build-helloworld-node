@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "diaggarw-7688"
+    labels:
+        app: "diaggarw-7688"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: diaggarwab7b-diaggarw-7688.8fd377fc1d604524b4e1.southindia.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "diaggarw-7688"
+                servicePort: 8080
