@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: "aksddiaggarw-4ef6"
+    labels:
+        app: "aksddiaggarw-4ef6"
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 8080
+      targetPort: 8080
+      protocol: TCP
+      name: http
+    selector:
+        app: "aksddiaggarw-4ef6"
