@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "aksddiaggarw-a201"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "aksddiaggarw-a201"
+  template:
+    metadata:
+      labels:
+        app: "aksddiaggarw-a201"
+    spec:
+      containers:
+        - name: "aksddiaggarw-a201"
+          image: "yugangwportal.azurecr.io/aksddiaggarw"
+          ports:
+          - containerPort: 8080
