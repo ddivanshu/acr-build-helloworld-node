@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: "aksdiaggarwaks-4d16"
+    labels:
+        app: "aksdiaggarwaks-4d16"
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 8080
+      targetPort: 8080
+      protocol: TCP
+      name: http
+    selector:
+        app: "aksdiaggarwaks-4d16"
