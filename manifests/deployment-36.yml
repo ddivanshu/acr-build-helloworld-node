@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "abcd-d5b0"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "abcd-d5b0"
+  template:
+    metadata:
+      labels:
+        app: "abcd-d5b0"
+    spec:
+      containers:
+        - name: "abcd-d5b0"
+          image: "aaaatiwarishubregistry.azurecr.io/abcd"
+          ports:
+          - containerPort: 8080
