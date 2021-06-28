@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: "aatiwarishubaks2-41df"
+    labels:
+        app: "aatiwarishubaks2-41df"
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 8080
+      targetPort: 8080
+      protocol: TCP
+      name: http
+    selector:
+        app: "aatiwarishubaks2-41df"
